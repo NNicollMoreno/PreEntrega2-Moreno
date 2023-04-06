@@ -1,0 +1,196 @@
+/* General */
+.logo img{
+    height: 80px;
+    width: 80px;
+    padding: 20px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-top: 30px;
+}
+li{
+    padding: 20px;
+    font-family: 'Montserrat semibold', sans-serif;
+    font-size: 23px;
+}
+a{
+    text-decoration: none;
+    transition: all 1s;
+}
+.encabezado{
+    font-size: 50px;
+    text-align: center;
+}
+.encabezadoNosotros{
+    font-size: 50px;
+    text-align: center;
+}
+header{
+    display: flex;
+    height: 50px;
+}
+.flexheader{
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    color: #8298D0;
+}
+footer{
+    display: flex;
+}
+.flex-footer{
+    background-color: #8298D0;
+    justify-content: space-around;
+    font-family: 'Montserrat semibold', sans-serif;
+    color: white;
+}
+.buscar-caja{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.buscar-boton{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.tiktok img{
+    height: 30px;
+    width: 30px;
+}
+.insta img{
+    height: 30px;
+    width: 30px;
+}
+.depresion img{
+    display: flex;
+    height: 500px;
+    width: 430px;
+    margin-top: 80px;
+    padding: 20px;
+}
+p{
+    font-family: 'Montserrat semibold', sans-serif;
+    color: #353853;
+    text-align: justify;
+}
+.infografias{
+    display: flex;
+    justify-content: space-around;
+}
+.buscar-info{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.buscar-descubre{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+}
+.comment-area1{
+    margin-top: 80px;
+}
+.comment-area2{
+    margin-top: 20px;
+}
+.ansiedad{
+    display: flex;
+    margin-top: 70px;
+    height: 500px;
+}
+.ejercicios{
+    display: flex;
+    justify-content: space-around;
+}
+h2{
+    font-family: 'Montserrat semibold', sans-serif;
+    color: #8298D0;
+}
+.productos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.boton{
+    width: 130px;
+    height: 27px;
+    background-color: #8298D0;
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 3px solid #353853;
+    text-align: center;
+}
+
+.insta img:hover {cursor: pointer;}
+.tiktok img:hover {cursor: pointer;}
+.boton:hover{cursor: pointer;}
+
+/* Desktop */
+@media screen and (min-width:1024px){
+    .grid{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{grid-area: header;}
+    main{grid-area: main;}
+    footer{grid-area: footer;}
+    header, footer, ul{display: flex;
+    flex-direction: row;}
+    .jCSpaceAround{justify-content: space-around;}
+    a{font-size: 22px; color: #8298D0;}
+    .gridMain{
+        display: grid;
+    }
+    .encabezado{grid-area: encabezado;}
+    .gridProducto{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+    .imgProducto{
+        padding: 10px;
+    }
+    a:hover{font-size: 27px; color: #353853;}
+}
+
+/* Mobile */
+@media screen and (max-width:768px){
+    .grid{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+    }
+    header{display: flex; flex-direction: column; align-items: center;}
+    ul{display: flex; flex-direction: row; justify-content: center; padding-left: 0;
+    margin-top: 0px;}
+    li{padding: 5px; margin: 5px;}
+    main, footer{display: flex; flex-direction: column; align-items: center;}
+    .encabezado{font-size: 30px; padding-top: 80px; align-items: center;}
+    a{font-size: 10px; color: #8298D0;}
+    .depresion img{height: 406px; width: 354px; padding: 33px;}
+    .encabezadoNosotros{font-size: 30px; align-items: center;}
+    .buscar-info{padding-top: 45px;}
+    .productos{display: flex; justify-content: center;}
+}
